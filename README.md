@@ -1,16 +1,20 @@
-# desafio_
+# User Story
 
-A new Flutter project.
+Projeto de desafio para a vaga de estagio como Desenvolvedor Flutter na Engeselt Softwares.
 
-## Getting Started
+## Desafio 
 
-This project is a starting point for a Flutter application.
+desenvolver uma aplicação mobile para relatar ocorrências de forma eficiente, contribuindo para a informação e vigilância coletiva na comunidade.
 
-A few resources to get you started if this is your first Flutter project:
+## Solução
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Tecnologias utilizadas:
+<p align="left">
+  <a href="https://flutter.dev/" target="_blank">  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"  width="40" height="40" /> </a>
+  <a href="https://firebase.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> 
+  <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>  
+</p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Solução](https://github.com/SystemG1000/desafio_vigilancia_comunitaria/assets/101288917/b04b5ddd-f574-43e2-b1a1-13c6dee644f1)
+
+![Solução](https://github.com/SystemG1000/desafio_vigilancia_comunitaria/assets/101288917/533cdf2f-75f7-4d03-962c-f4846ba41e73)
