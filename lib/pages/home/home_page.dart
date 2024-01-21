@@ -1,7 +1,7 @@
 import 'package:desafio/pages/check/check_page.dart';
 import 'package:desafio/pages/feed/feed_page.dart';
 import 'package:desafio/pages/map/map_page.dart';
-import 'package:desafio/pages/post/complaint_page.dart';
+import 'package:desafio/pages/post/post_create_page.dart';
 import 'package:desafio/pages/settings/settings_page.dart';
 import 'package:desafio/utils/my_colors.dart';
 import 'package:flutter/material.dart';
@@ -29,34 +29,23 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  /* List<Widget> _optionWidgets() {
-    List<Widget> widgets = [
-      const CheckPage(),
-      const MapPage(),
-      const SettingsPage(),
-    ];
-
-    return widgets;
-  } */
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.account_circle_rounded,
-          size: 50,
-        ),
+        centerTitle: true,
+        title: const Text("Vigilância comunitária"),
         leadingWidth: 100,
         backgroundColor: MyColors.primaryColor,
+        automaticallyImplyLeading: false,
       ),
       body: PageView(
         controller: pc,
         onPageChanged: setCurrentPage,
-        children: const [
-          FeedPage(),
-          CheckPage(),
-          MapPage(),
+        children: [
+          const FeedPage(),
+          const CheckPage(),
+          const MapPage(),
           SettingsPage(),
         ],
       ),
@@ -86,7 +75,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const ComplaintPage()));
+              MaterialPageRoute(builder: (context) => const PostCreatePage()));
         },
         tooltip: "New complaint",
         backgroundColor: MyColors.secondaryColor,
