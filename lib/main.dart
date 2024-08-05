@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:desafio/core/auth/auth_service.dart';
-import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => AuthService(),
-        ),
-      ],
-      child: const App(),
-    ),
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
   );
+  runApp(const App());
 }
