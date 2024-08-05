@@ -1,10 +1,10 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
-project(desafio_ LANGUAGES CXX)
+project(desafio_vigilancia_comunitaria LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "desafio_")
+set(BINARY_NAME "desafio_vigilancia_comunitaria")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.

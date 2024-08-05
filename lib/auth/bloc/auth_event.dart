@@ -18,3 +18,13 @@ class Submitted extends AuthEvent {
     this.password,
   );
 }
+
+class CreatedAccount extends AuthEvent {
+  final String email;
+  final String password;
+
+  const CreatedAccount(
+    this.email,
+    this.password,
+  );
+}

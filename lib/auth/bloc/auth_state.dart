@@ -1,17 +1,42 @@
 part of 'auth_bloc.dart';
 
 class AuthState {
-  const AuthState();
+  final AuthStatus status;
+  final User? user;
+
+  AuthState({
+    this.status = const StatusInitial(),
+    this.user,
+  });
+
+  AuthState copyWith({
+    AuthStatus? status,
+    User? user,
+  }) {
+    return AuthState(
+      status: status ?? this.status,
+      user: user ?? this.user,
+    );
+  }
 }
 
-class Initial extends AuthState {
-  const Initial();
+class AuthStatus {
+  const AuthStatus();
+}
+class StatusInitial extends AuthStatus {
+  const StatusInitial();
 }
 
-class Loading extends AuthState {
-  const Loading();
+class StatusLoading extends AuthStatus {
+  const StatusLoading();
 }
 
-class Logged extends AuthState {
-  const Logged();
+class StatusSuccess extends AuthStatus {
+  const StatusSuccess();
+}
+
+class StatusError extends AuthStatus {
+  final String message;
+
+  const StatusError(this.message);
 }

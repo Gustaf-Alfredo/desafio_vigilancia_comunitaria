@@ -1,3 +1,4 @@
+import 'package:desafio/auth/view/auth_view.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,16 +16,3 @@ class AuthPage extends StatelessWidget {
   }
 }
 
-class AuthView extends StatelessWidget {
-  const AuthView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<AuthBloc, AuthState>(
-      builder: (context, state) {
-        // TODO: return correct widget based on the state.
-        return const SizedBox();
-      },
-    );
-  }
-}
