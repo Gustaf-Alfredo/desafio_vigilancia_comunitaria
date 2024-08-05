@@ -42,10 +42,10 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: pc,
         onPageChanged: setCurrentPage,
-        children: [
-          const FeedPage(),
-          const CheckPage(),
-          const MapPage(),
+        children: const [
+          FeedPage(),
+          CheckPage(),
+          MapPage(),
           SettingsPage(),
         ],
       ),

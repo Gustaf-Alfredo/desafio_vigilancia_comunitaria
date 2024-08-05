@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:desafio/components/decoration_field_authentication.dart';
-import 'package:desafio/pages/home/home_page.dart';
-import 'package:desafio/services/auth_service.dart';
+import 'package:desafio/utils/decoration_field_authentication.dart';
+import 'package:desafio/pages/home2/home_page.dart';
+import 'package:desafio/core/auth/auth_service.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:desafio/utils/my_colors.dart';
@@ -45,8 +45,8 @@ class _PostCreatePageState extends State<PostCreatePage> {
   double total = 0;
 
   Future<String?> getImage() async {
-    final ImagePicker _picker = ImagePicker();
-    XFile? file = await _picker.pickImage(source: ImageSource.gallery);
+    final ImagePicker picker = ImagePicker();
+    XFile? file = await picker.pickImage(source: ImageSource.gallery);
     setState(() => photo = file);
     print("============${photo?.path}=================");
     return photo?.path;
@@ -215,6 +215,7 @@ class _PostCreatePageState extends State<PostCreatePage> {
                         if (value.length != 8) {
                           return 'CEP inválido!';
                         }
+                        return null;
                       }),
                   const SizedBox(
                     height: 16,
@@ -293,7 +294,7 @@ class _PostCreatePageState extends State<PostCreatePage> {
                       uploadData();
                     },
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
+                        backgroundColor: WidgetStateProperty.all<Color>(
                             MyColors.secondaryColor)),
                     child: const Text("Enviar"),
                   )

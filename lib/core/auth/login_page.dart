@@ -1,11 +1,11 @@
-import 'package:desafio/components/decoration_field_authentication.dart';
-import 'package:desafio/services/auth_service.dart';
+import 'package:desafio/utils/decoration_field_authentication.dart';
+import 'package:desafio/core/auth/auth_service.dart';
 import 'package:desafio/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({Key? key}) : super(key: key);
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -176,7 +176,7 @@ class _LoginPageState extends State<LoginPage> {
                                 padding: const EdgeInsets.all(16.0),
                                 child: Text(
                                   actionButton,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 20,
                                       color: MyColors.primaryColor),
                                 ),
@@ -188,7 +188,7 @@ class _LoginPageState extends State<LoginPage> {
                 TextButton(
                   onPressed: () => setFormAction(!isLogin),
                   style: TextButton.styleFrom(
-                    primary: MyColors.primaryColor,
+                    foregroundColor: MyColors.primaryColor,
                   ),
                   child: Text(toggleButton),
                 ),

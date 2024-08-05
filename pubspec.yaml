@@ -48,6 +48,17 @@ dependencies:
   intl: ^0.19.0
   latlong2: ^0.9.0
   flutter_map: ^6.1.0
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
+  go_router: ^14.2.2
+  mason_cli: ^0.1.0-dev.55
+  mason: ^0.1.0-dev.57
+  bloc_concurrency: ^0.2.5
+  talker: ^4.4.0
+  talker_flutter: ^4.1.2
+  talker_dio_logger: ^4.4.0
+  talker_logger: ^4.4.0
+  dio: ^5.5.0+1
 
 dev_dependencies:
   flutter_test:
@@ -59,6 +70,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  build_runner: ^2.4.11
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
